@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Session3rdAssig2 {
 
 	public Session3rdAssig2() {
-		
+		// TODO Auto-generated constructor stub
 	}
 
 	public static void main(String[] args) {
@@ -28,7 +28,7 @@ public class Session3rdAssig2 {
 	public boolean IsNumberPrime(int number)
 	{
 		boolean isprime=true;
-		for(int i =1;i<=number;i++)
+		for(int i =2;i<=number;i++)
 		{
 			//System.out.println(i);
 			for(int j =i-1;j>1;j--)
