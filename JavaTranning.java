@@ -5,7 +5,12 @@
  */
 package javatranning;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -18,19 +23,43 @@ public class JavaTranning {
      */
     public static void main(String[] args) {
        
-	//Tester 1
+        College college =new College();
+        college.DisplayCollegeStd();
+        college.SetResult();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter Registeration No");
+        try {
+            String rollno = br.readLine();
+            Result res =college.GetResult(Integer.parseInt(rollno));
+            if(res != null)
+            {
+               System.out.println("Regno :"+res.RollNo); 
+               System.out.println("Grade :"+res.Grade); 
+               System.out.println("Year :"+res.Year); 
+              
+            }
+            else
+            {
+                  System.out.println("Registeration No Not Found");
+            }
+            
+        } catch (IOException ex) {
+            Logger.getLogger(JavaTranning.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
         IShape tri =new Rectangle(23,34);
         tri.Draw();
         
         float area_rec =tri.getArea();
-        System.out.println("Area Of Rectangle Is :"+area_rec) ;
+       System.out.println("Area Of Rectangle Is :"+area_rec) ;
         
         IShape sqr =new Square(5);
         sqr.Draw();
         float area_sqr =sqr.getArea();
         System.out.println("Area Of Square Is :"+area_sqr) ;
         
-        //Tester 2
+        
         Instrument tester =new StringedInstrument(6);
         tester.setName("Stringed Instrument");
         tester.Play();
