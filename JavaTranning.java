@@ -18,18 +18,19 @@ public class JavaTranning {
      */
     public static void main(String[] args) {
        
+	//Tester 1
         IShape tri =new Rectangle(23,34);
         tri.Draw();
         
         float area_rec =tri.getArea();
-       System.out.println("Area Of Rectangle Is :"+area_rec) ;
+        System.out.println("Area Of Rectangle Is :"+area_rec) ;
         
         IShape sqr =new Square(5);
         sqr.Draw();
         float area_sqr =sqr.getArea();
         System.out.println("Area Of Square Is :"+area_sqr) ;
         
-        
+        //Tester 2
         Instrument tester =new StringedInstrument(6);
         tester.setName("Stringed Instrument");
         tester.Play();
